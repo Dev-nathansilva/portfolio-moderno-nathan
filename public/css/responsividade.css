@@ -1,0 +1,22 @@
+/*---------------------------
+  -> RESPONSIVIDADE
+ -----------------------------*/
+
+@media (min-width: 1367px) and (max-width: 2399px) {
+  /* 1280px */
+}
+@media (min-width: 1201px) and (max-width: 1366px) {
+  /* 1100px */
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* 924px */
+}
+@media (min-width: 881px) and (max-width: 1024px) {
+  /* 780px */
+}
+@media (min-width: 768px) and (max-width: 880px) {
+  /* 728px */
+}
+@media (max-width: 767px) {
+  /* 360px */
+}

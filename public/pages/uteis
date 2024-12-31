@@ -1,0 +1,83 @@
+# <div class="marquee-container">
+#           <div class="marquee">
+#             <img src="../images/banners/asessoria.jpg" alt="Image 1" />
+#             <img src="../images/banners/curadoria.jpg" alt="Image 2" />
+#             <img src="../images/banners/foxaligner.jpg" alt="Image 3" />
+#             <!-- Repetição para efeito contínuo -->
+#             <img src="../images/banners/asessoria.jpg" alt="Image 1" />
+#             <img src="../images/banners/curadoria.jpg" alt="Image 2" />
+#             <img src="../images/banners/foxaligner.jpg" alt="Image 3" />
+#           </div>
+#         </div>
+
+
+
+
+
+<div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/foxaligner.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/jblcell.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/curadoria.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/canarita.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/lumere.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/crocs.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/uive.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/agstelecom.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/luana.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/logo-empresas/figueiredocorreia.png" alt="" />
+            </div>
+           
+        </div>
+
+
+
+        const swiper2 = new Swiper(".swiper-container-logos", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+        speed: 7000,
+        allowTouchMove: false,
+      });
+
+
+
+      .swiper-container-logos {
+  width: 40%;
+  overflow: hidden;
+  position: relative;
+  margin: 25px;
+}
+
+.swiper-container-logos .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.swiper-container-logos .swiper-slide {
+  height: 70px;
+  width: auto;
+  display: inline-block;
+  flex-shrink: 0;
+}

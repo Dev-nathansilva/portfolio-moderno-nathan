@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efeito Estrela Cadente</title>
+    <style>
+      body {
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      svg {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      width="767"
+      height="655"
+      viewBox="0 0 767 655"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <!-- Gradiente para a linha animada -->
+        <linearGradient
+          id="gradient"
+          x1="0"
+          y1="0"
+          x2="1"
+          y2="0"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0%" stop-color="transparent" />
+          <stop offset="100%" stop-color="orange" />
+        </linearGradient>
+      </defs>
+      <!-- Caminho base cinza -->
+      <path
+        id="base-path"
+        d="M1 18H252C262.493 18 271 26.5066 271 37V587V593.5C271 603.993 279.507 612.5 290 612.5H538.5C548.993 612.5 557.5 603.993 557.5 593.5V40V20C557.5 9.50659 566.007 1 576.5 1H747.5C757.993 1 766.5 9.50659 766.5 20V654"
+        stroke="#505050"
+        stroke-linecap="round"
+      />
+      <!-- Linha animada -->
+      <path
+        id="animated-path"
+        d="M1 18H252C262.493 18 271 26.5066 271 37V587V593.5C271 603.993 279.507 612.5 290 612.5H538.5C548.993 612.5 557.5 603.993 557.5 593.5V40V20C557.5 9.50659 566.007 1 576.5 1H747.5C757.993 1 766.5 9.50659 766.5 20V654"
+        stroke="url(#gradient)"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+    </svg>
+
+    <script>
+      window.addEventListener("load", () => {
+        // Seleciona o caminho animado
+        const animatedPath = document.getElementById("animated-path");
+
+        // Calcula o comprimento total do caminho
+        const totalLength = animatedPath.getTotalLength();
+
+        // Define o comprimento visível da linha (tamanho da "estrela cadente")
+        const lineLength = 100; // Tamanho da linha visível
+
+        // Inicializa propriedades dinâmicas no estilo
+        animatedPath.style.strokeDasharray = `${lineLength} ${totalLength}`;
+        animatedPath.style.strokeDashoffset = totalLength;
+
+        // Função para reiniciar a animação sem aceleração
+        const startAnimation = () => {
+          // Resetando o strokeDashoffset
+          animatedPath.style.strokeDashoffset = totalLength;
+
+          // Aplicando a animação suave
+          animatedPath.animate(
+            [
+              { strokeDashoffset: totalLength }, // Começa no final do caminho
+              { strokeDashoffset: 0 }, // Vai até o início
+            ],
+            {
+              duration: 10000, // Duração da animação em milissegundos
+              iterations: 1, // A animação roda apenas uma vez por ciclo
+              easing: "linear",
+            }
+          );
+        };
+
+        // Inicializa a animação
+        startAnimation();
+
+        // Reinicia a animação após cada ciclo
+        setInterval(startAnimation, 10000);
+      });
+    </script>
+  </body>
+</html>
