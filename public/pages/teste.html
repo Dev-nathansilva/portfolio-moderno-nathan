@@ -1,103 +1,718 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Efeito Estrela Cadente</title>
-    <style>
-      body {
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="content">
+  <section id="home">
+    <div class="apresentacao-inicial">
+      <img src="../images/icones/raio.svg" alt="" />
+      <p class="text-apresentacao">Olá, me chamo nathan</p>
+    </div>
+    <h1 class="titulo-principal">
+      <span class="destaque-laranja">Web Design Full Stack</span>
+      apaixonado por tecnologia, design visual e soluções práticas
+    </h1>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../images/banners/assessoria.jpg" alt="Image 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/banners/curadoria.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/banners/foxaligner.jpg" alt="Image 3" />
+        </div>
+        <!-- <div class="swiper-slide">
+          <img src="../images/banners/assessoria.jpg" alt="Image 1" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/banners/curadoria.jpg" alt="Image 2" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/banners/foxaligner.jpg" alt="Image 3" />
+        </div> -->
+      </div>
+    </div>
 
-      svg {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <svg
-      width="767"
-      height="655"
-      viewBox="0 0 767 655"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <!-- Gradiente para a linha animada -->
-        <linearGradient
-          id="gradient"
-          x1="0"
-          y1="0"
-          x2="1"
-          y2="0"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0%" stop-color="transparent" />
-          <stop offset="100%" stop-color="orange" />
-        </linearGradient>
-      </defs>
-      <!-- Caminho base cinza -->
-      <path
-        id="base-path"
-        d="M1 18H252C262.493 18 271 26.5066 271 37V587V593.5C271 603.993 279.507 612.5 290 612.5H538.5C548.993 612.5 557.5 603.993 557.5 593.5V40V20C557.5 9.50659 566.007 1 576.5 1H747.5C757.993 1 766.5 9.50659 766.5 20V654"
-        stroke="#505050"
-        stroke-linecap="round"
+    <p class="subtitulo-logos">empresas com projetos fechados</p>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="../images/logo-empresas/curadoria.png" alt="Image 1" />
+        <img src="../images/logo-empresas/lumere.png" alt="Image 2" />
+        <img src="../images/logo-empresas/foxaligner.png" alt="Image 3" />
+        <img src="../images/logo-empresas/crocs.png" alt="Image 1" />
+        <img src="../images/logo-empresas/canarita.png" alt="Image 2" />
+        <img src="../images/logo-empresas/uive.png" alt="Image 3" />
+      </div>
+      <div class="logos-slide">
+        <img src="../images/logo-empresas/curadoria.png" alt="Image 1" />
+        <img src="../images/logo-empresas/lumere.png" alt="Image 2" />
+        <img src="../images/logo-empresas/foxaligner.png" alt="Image 3" />
+        <img src="../images/logo-empresas/crocs.png" alt="Image 1" />
+        <img src="../images/logo-empresas/canarita.png" alt="Image 2" />
+        <img src="../images/logo-empresas/uive.png" alt="Image 3" />
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container-header">
+      <div class="group-title">
+        <p>cases de sucesso</p>
+        <h3>VEJA NOSSOS PROJETOS</h3>
+      </div>
+
+      <a href="" class="btn-visualizar-todos">Ver todos os projetos</a>
+    </div>
+
+    <div class="swiper-projetos">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../images/projetos/projetos-curadoria.jpg" alt="Image 1" />
+          <div class="container-info-projeto">
+            <div class="group">
+              <p class="sobre">UI + landing page</p>
+              <p class="titulo-projeto">CURADOR.IA</p>
+            </div>
+            <svg
+              width="55"
+              height="55"
+              viewBox="0 0 62 62"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_193_12466)">
+                <rect
+                  width="61.9416"
+                  height="61.9416"
+                  rx="30.9708"
+                  fill="black"
+                />
+                <g clip-path="url(#clip1_193_12466)">
+                  <path
+                    d="M23.6762 31.7748L25.19 32.1865C26.1553 32.45 26.6367 32.5818 26.9736 32.9187C27.3106 33.2557 27.4423 33.7371 27.7046 34.7011L28.1176 36.2162C29.2944 40.5296 29.8822 42.6857 31.1743 42.7567C32.4665 42.8251 33.2823 40.7425 34.9114 36.5798L39.3832 25.1507C40.6626 21.8824 41.3024 20.247 40.4739 19.4185C39.6454 18.59 38.01 19.2297 34.7416 20.5092L23.3126 24.981C19.1499 26.6101 17.0673 27.4259 17.1357 28.718C17.2041 30.0102 19.3615 30.5967 23.6762 31.7748Z"
+                    stroke="#847D7D"
+                    stroke-width="1.79152"
+                  />
+                </g>
+              </g>
+              <rect
+                x="0.45741"
+                y="0.45741"
+                width="61.0268"
+                height="61.0268"
+                rx="30.5134"
+                stroke="#6B6B6B"
+                stroke-width="0.914819"
+              />
+              <defs>
+                <clipPath id="clip0_193_12466">
+                  <rect
+                    width="61.9416"
+                    height="61.9416"
+                    rx="30.9708"
+                    fill="white"
+                  />
+                </clipPath>
+                <clipPath id="clip1_193_12466">
+                  <rect
+                    width="42.9965"
+                    height="42.9965"
+                    fill="white"
+                    transform="translate(1.83008 27.6587) rotate(-45)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/projetos/projetos-vision.jpg" alt="Image 2" />
+          <div class="container-info-projeto">
+            <div class="group">
+              <p class="sobre">UI + website</p>
+              <p class="titulo-projeto">VISION T</p>
+            </div>
+            <svg
+              width="55"
+              height="55"
+              viewBox="0 0 62 62"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_193_12466)">
+                <rect
+                  width="61.9416"
+                  height="61.9416"
+                  rx="30.9708"
+                  fill="black"
+                />
+                <g clip-path="url(#clip1_193_12466)">
+                  <path
+                    d="M23.6762 31.7748L25.19 32.1865C26.1553 32.45 26.6367 32.5818 26.9736 32.9187C27.3106 33.2557 27.4423 33.7371 27.7046 34.7011L28.1176 36.2162C29.2944 40.5296 29.8822 42.6857 31.1743 42.7567C32.4665 42.8251 33.2823 40.7425 34.9114 36.5798L39.3832 25.1507C40.6626 21.8824 41.3024 20.247 40.4739 19.4185C39.6454 18.59 38.01 19.2297 34.7416 20.5092L23.3126 24.981C19.1499 26.6101 17.0673 27.4259 17.1357 28.718C17.2041 30.0102 19.3615 30.5967 23.6762 31.7748Z"
+                    stroke="#847D7D"
+                    stroke-width="1.79152"
+                  />
+                </g>
+              </g>
+              <rect
+                x="0.45741"
+                y="0.45741"
+                width="61.0268"
+                height="61.0268"
+                rx="30.5134"
+                stroke="#6B6B6B"
+                stroke-width="0.914819"
+              />
+              <defs>
+                <clipPath id="clip0_193_12466">
+                  <rect
+                    width="61.9416"
+                    height="61.9416"
+                    rx="30.9708"
+                    fill="white"
+                  />
+                </clipPath>
+                <clipPath id="clip1_193_12466">
+                  <rect
+                    width="42.9965"
+                    height="42.9965"
+                    fill="white"
+                    transform="translate(1.83008 27.6587) rotate(-45)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/projetos/projetos-karla.jpg" alt="Image 3" />
+          <div class="container-info-projeto banners-claros">
+            <div class="group">
+              <p class="sobre">UI + website</p>
+              <p class="titulo-projeto">Dra Karla Giusti</p>
+            </div>
+            <svg
+              width="55"
+              height="55"
+              viewBox="0 0 62 62"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_193_12466)">
+                <rect
+                  width="61.9416"
+                  height="61.9416"
+                  rx="30.9708"
+                  fill="black"
+                />
+                <g clip-path="url(#clip1_193_12466)">
+                  <path
+                    d="M23.6762 31.7748L25.19 32.1865C26.1553 32.45 26.6367 32.5818 26.9736 32.9187C27.3106 33.2557 27.4423 33.7371 27.7046 34.7011L28.1176 36.2162C29.2944 40.5296 29.8822 42.6857 31.1743 42.7567C32.4665 42.8251 33.2823 40.7425 34.9114 36.5798L39.3832 25.1507C40.6626 21.8824 41.3024 20.247 40.4739 19.4185C39.6454 18.59 38.01 19.2297 34.7416 20.5092L23.3126 24.981C19.1499 26.6101 17.0673 27.4259 17.1357 28.718C17.2041 30.0102 19.3615 30.5967 23.6762 31.7748Z"
+                    stroke="#847D7D"
+                    stroke-width="1.79152"
+                  />
+                </g>
+              </g>
+              <rect
+                x="0.45741"
+                y="0.45741"
+                width="61.0268"
+                height="61.0268"
+                rx="30.5134"
+                stroke="#6B6B6B"
+                stroke-width="0.914819"
+              />
+              <defs>
+                <clipPath id="clip0_193_12466">
+                  <rect
+                    width="61.9416"
+                    height="61.9416"
+                    rx="30.9708"
+                    fill="white"
+                  />
+                </clipPath>
+                <clipPath id="clip1_193_12466">
+                  <rect
+                    width="42.9965"
+                    height="42.9965"
+                    fill="white"
+                    transform="translate(1.83008 27.6587) rotate(-45)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/projetos/projetos-curadoria.jpg" alt="Image 1" />
+          <div class="container-info-projeto">
+            <div class="group">
+              <p class="sobre">UI + landing page</p>
+              <p class="titulo-projeto">CURADOR.IA</p>
+            </div>
+            <svg
+              width="55"
+              height="55"
+              viewBox="0 0 62 62"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_193_12466)">
+                <rect
+                  width="61.9416"
+                  height="61.9416"
+                  rx="30.9708"
+                  fill="black"
+                />
+                <g clip-path="url(#clip1_193_12466)">
+                  <path
+                    d="M23.6762 31.7748L25.19 32.1865C26.1553 32.45 26.6367 32.5818 26.9736 32.9187C27.3106 33.2557 27.4423 33.7371 27.7046 34.7011L28.1176 36.2162C29.2944 40.5296 29.8822 42.6857 31.1743 42.7567C32.4665 42.8251 33.2823 40.7425 34.9114 36.5798L39.3832 25.1507C40.6626 21.8824 41.3024 20.247 40.4739 19.4185C39.6454 18.59 38.01 19.2297 34.7416 20.5092L23.3126 24.981C19.1499 26.6101 17.0673 27.4259 17.1357 28.718C17.2041 30.0102 19.3615 30.5967 23.6762 31.7748Z"
+                    stroke="#847D7D"
+                    stroke-width="1.79152"
+                  />
+                </g>
+              </g>
+              <rect
+                x="0.45741"
+                y="0.45741"
+                width="61.0268"
+                height="61.0268"
+                rx="30.5134"
+                stroke="#6B6B6B"
+                stroke-width="0.914819"
+              />
+              <defs>
+                <clipPath id="clip0_193_12466">
+                  <rect
+                    width="61.9416"
+                    height="61.9416"
+                    rx="30.9708"
+                    fill="white"
+                  />
+                </clipPath>
+                <clipPath id="clip1_193_12466">
+                  <rect
+                    width="42.9965"
+                    height="42.9965"
+                    fill="white"
+                    transform="translate(1.83008 27.6587) rotate(-45)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/projetos/projetos-vision.jpg" alt="Image 2" />
+          <div class="container-info-projeto">
+            <div class="group">
+              <p class="sobre">UI + website</p>
+              <p class="titulo-projeto">VISION T</p>
+            </div>
+            <svg
+              width="55"
+              height="55"
+              viewBox="0 0 62 62"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_193_12466)">
+                <rect
+                  width="61.9416"
+                  height="61.9416"
+                  rx="30.9708"
+                  fill="black"
+                />
+                <g clip-path="url(#clip1_193_12466)">
+                  <path
+                    d="M23.6762 31.7748L25.19 32.1865C26.1553 32.45 26.6367 32.5818 26.9736 32.9187C27.3106 33.2557 27.4423 33.7371 27.7046 34.7011L28.1176 36.2162C29.2944 40.5296 29.8822 42.6857 31.1743 42.7567C32.4665 42.8251 33.2823 40.7425 34.9114 36.5798L39.3832 25.1507C40.6626 21.8824 41.3024 20.247 40.4739 19.4185C39.6454 18.59 38.01 19.2297 34.7416 20.5092L23.3126 24.981C19.1499 26.6101 17.0673 27.4259 17.1357 28.718C17.2041 30.0102 19.3615 30.5967 23.6762 31.7748Z"
+                    stroke="#847D7D"
+                    stroke-width="1.79152"
+                  />
+                </g>
+              </g>
+              <rect
+                x="0.45741"
+                y="0.45741"
+                width="61.0268"
+                height="61.0268"
+                rx="30.5134"
+                stroke="#6B6B6B"
+                stroke-width="0.914819"
+              />
+              <defs>
+                <clipPath id="clip0_193_12466">
+                  <rect
+                    width="61.9416"
+                    height="61.9416"
+                    rx="30.9708"
+                    fill="white"
+                  />
+                </clipPath>
+                <clipPath id="clip1_193_12466">
+                  <rect
+                    width="42.9965"
+                    height="42.9965"
+                    fill="white"
+                    transform="translate(1.83008 27.6587) rotate(-45)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/projetos/projetos-karla.jpg" alt="Image 3" />
+          <div class="container-info-projeto banners-claros">
+            <div class="group">
+              <p class="sobre">UI + website</p>
+              <p class="titulo-projeto">Dra Karla Giusti</p>
+            </div>
+            <svg
+              width="55"
+              height="55"
+              viewBox="0 0 62 62"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_193_12466)">
+                <rect
+                  width="61.9416"
+                  height="61.9416"
+                  rx="30.9708"
+                  fill="black"
+                />
+                <g clip-path="url(#clip1_193_12466)">
+                  <path
+                    d="M23.6762 31.7748L25.19 32.1865C26.1553 32.45 26.6367 32.5818 26.9736 32.9187C27.3106 33.2557 27.4423 33.7371 27.7046 34.7011L28.1176 36.2162C29.2944 40.5296 29.8822 42.6857 31.1743 42.7567C32.4665 42.8251 33.2823 40.7425 34.9114 36.5798L39.3832 25.1507C40.6626 21.8824 41.3024 20.247 40.4739 19.4185C39.6454 18.59 38.01 19.2297 34.7416 20.5092L23.3126 24.981C19.1499 26.6101 17.0673 27.4259 17.1357 28.718C17.2041 30.0102 19.3615 30.5967 23.6762 31.7748Z"
+                    stroke="#847D7D"
+                    stroke-width="1.79152"
+                  />
+                </g>
+              </g>
+              <rect
+                x="0.45741"
+                y="0.45741"
+                width="61.0268"
+                height="61.0268"
+                rx="30.5134"
+                stroke="#6B6B6B"
+                stroke-width="0.914819"
+              />
+              <defs>
+                <clipPath id="clip0_193_12466">
+                  <rect
+                    width="61.9416"
+                    height="61.9416"
+                    rx="30.9708"
+                    fill="white"
+                  />
+                </clipPath>
+                <clipPath id="clip1_193_12466">
+                  <rect
+                    width="42.9965"
+                    height="42.9965"
+                    fill="white"
+                    transform="translate(1.83008 27.6587) rotate(-45)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="textos">
+      <div class="texto-slide">
+        <img src="../images/icones/dev.png" alt="" />
+        <p>DESENVOLVEDOR</p>
+        <img src="../images/icones/ux-ui.png" alt="" />
+        <p>UX / UI DESIGNER</p>
+        <img src="../images/icones/prototipo.png" alt="" />
+        <p>Arquitetura / Protótipo</p>
+        <img src="../images/icones/dev.png" alt="" />
+        <p>FUNCIONALIDADE</p>
+        <img src="../images/icones/ux-ui.png" alt="" />
+        <p>VALOR DA MARCA</p>
+      </div>
+      <div class="texto-slide">
+        <img src="../images/icones/dev.png" alt="" />
+        <p>DESENVOLVEDOR</p>
+        <img src="../images/icones/ux-ui.png" alt="" />
+        <p>UX / UI DESIGNER</p>
+        <img src="../images/icones/prototipo.png" alt="" />
+        <p>Arquitetura / Protótipo</p>
+        <img src="../images/icones/dev.png" alt="" />
+        <p>FUNCIONALIDADE</p>
+        <img src="../images/icones/ux-ui.png" alt="" />
+        <p>VALOR DA MARCA</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions">
+    <div class="block-content">
+      <div class="header-info">
+        <p class="subtitle">Desenvolvimento de projetos</p>
+        <h3 class="title-main">Soluções Criativas e Tecnológicas</h3>
+        <p class="explanatory-text">
+          Descubra os serviços que oferecemos no nosso estúdio para você. Com
+          design criativo, desenvolvimento inteligente e tecnologia sob medida,
+          levamos seu projeto ao próximo nível.
+        </p>
+
+        <a href="" class="btn-iniciar-projeto">Iniciar um projeto</a>
+      </div>
+      <div class="details-solutions">
+        <div class="container">
+          <img src="../images/icones/webdesign.png" alt="" />
+          <p class="title-solution">Web Design & UX/UI Design</p>
+          <p class="text-solution">
+            Designs incríveis e funcionais que encantam e convertem. Criamos
+            interfaces modernas e intuitivas para uma experiência inesquecível.
+          </p>
+        </div>
+        <div class="container">
+          <img src="../images/icones/sites.png" alt="" />
+          <p class="title-solution sites">
+            Criação de Websites, LP & E-commerce
+          </p>
+          <p class="text-solution">
+            Websites, landing pages e lojas virtuais sob medida, focados em
+            resultados e desempenho.
+          </p>
+        </div>
+        <div class="container">
+          <img src="../images/icones/dev-full.png" alt="" />
+          <p class="title-solution">Desenvolvimento Full Stack</p>
+          <p class="text-solution">
+            Aplicações completas, seguras e eficientes, do front-end ao
+            back-end, prontas para escalar.
+          </p>
+        </div>
+        <div class="container">
+          <img src="../images/icones/branding.png" alt="" />
+          <p class="title-solution">Branding</p>
+          <p class="text-solution">
+            Identidades visuais marcantes que conectam sua marca ao público
+            certo.
+          </p>
+        </div>
+      </div>
+
+      <img
+        class="element-block-texture"
+        src="../images/blocos-textura-elemento.png"
+        alt=""
       />
-      <!-- Linha animada -->
-      <path
-        id="animated-path"
-        d="M1 18H252C262.493 18 271 26.5066 271 37V587V593.5C271 603.993 279.507 612.5 290 612.5H538.5C548.993 612.5 557.5 603.993 557.5 593.5V40V20C557.5 9.50659 566.007 1 576.5 1H747.5C757.993 1 766.5 9.50659 766.5 20V654"
-        stroke="url(#gradient)"
-        stroke-width="3"
-        stroke-linecap="round"
+      <img
+        class="element-block-texture2"
+        src="../images/blocos-textura-elemento2.png"
+        alt=""
       />
-    </svg>
+      <svg
+        class="linha-animada"
+        width="767"
+        height="655"
+        viewBox="0 0 767 655"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <!-- Gradiente para a linha animada -->
+          <linearGradient
+            id="gradient"
+            x1="0"
+            y1="0"
+            x2="110"
+            y2="0"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0%" stop-color="orange" />
+          </linearGradient>
+        </defs>
+        <!-- Caminho base cinza -->
+        <path
+          id="base-path"
+          d="M1 18H252C262.493 18 271 26.5066 271 37V587V593.5C271 603.993 279.507 612.5 290 612.5H538.5C548.993 612.5 557.5 603.993 557.5 593.5V40V20C557.5 9.50659 566.007 1 576.5 1H747.5C757.993 1 766.5 9.50659 766.5 20V654"
+          stroke="#505050"
+          stroke-linecap="round"
+        />
+        <!-- Linha animada -->
+        <path
+          id="animated-path"
+          d="M1 18H252C262.493 18 271 26.5066 271 37V587V593.5C271 603.993 279.507 612.5 290 612.5H538.5C548.993 612.5 557.5 603.993 557.5 593.5V40V20C557.5 9.50659 566.007 1 576.5 1H747.5C757.993 1 766.5 9.50659 766.5 20V654"
+          stroke="url(#gradient)"
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+  </section>
 
-    <script>
-      window.addEventListener("load", () => {
-        // Seleciona o caminho animado
-        const animatedPath = document.getElementById("animated-path");
+  <section id="feedbacks">
+    <div class="subtitle-depoimentos">depoimentos</div>
+    <div class="title-depoimentos">Feedbacks de alguns de nossos clientes</div>
+    <p class="text-depoimentos">
+      Confira o que clientes e parceiros têm a dizer sobre as soluções criativas
+      e personalizadas que desenvolvi para transformar seus projetos
+    </p>
 
-        // Calcula o comprimento total do caminho
-        const totalLength = animatedPath.getTotalLength();
+    <img src="../images/pattern-circulo.png" alt="" class="patterns-circle" />
 
-        // Define o comprimento visível da linha (tamanho da "estrela cadente")
-        const lineLength = 100; // Tamanho da linha visível
+    <div class="blocks-depoimentos">
+      <div class="block">
+        <p class="text">
+          “Nathan estamos juntos viu!!! valeuu demaiss, parabéns pelo trabalho!
+          muito bom ter você por perto, certeza vamos manter essa parceria por
+          muito tempo.“
+        </p>
+        <p class="empresa">Uive Art</p>
+        <div class="setor-empresa">empresa de Áudio Visual</div>
+      </div>
+      <div class="block">
+        <p class="text">
+          “Excelente!! Muito Obrigado Nathan! Superou minhas expectativas, seu
+          trabalho é incrivel, nós conseguimos valorizar ainda mais a nossa
+          marca, vou indicar você para outras pessoas com certeza.“
+        </p>
+        <p class="empresa">Fox Aligner</p>
+        <div class="setor-empresa">empresa de Alinhadores invisíveis</div>
+      </div>
+    </div>
+  </section>
 
-        // Inicializa propriedades dinâmicas no estilo
-        animatedPath.style.strokeDasharray = `${lineLength} ${totalLength}`;
-        animatedPath.style.strokeDashoffset = totalLength;
+  <section id="about">
+    <div class="content">
+      <div class="container-foto">
+        <img src="../images/foto.png" alt="" />
+        <div class="group-conquistas">
+          <span> + 25 PROJETOS</span>
+          <span> + 10 CERTIFICAÇÕES</span>
+          <span> + 2 ANOS DE EXPERIÊNCIA</span>
+        </div>
+      </div>
+      <div class="container-about-me">
+        <p class="text-about">
+          Prazer, me chamo Nathan!<br /><br />Um Desenvolvedor apaixonado por
+          criar experiências digitais que conectam pessoas e ideias. Com ampla
+          experiência, atuei em projetos variados que me permitiram unir
+          criatividade e tecnologia.<br /><br />
+          Sou Web Designer, UX/UI Designer e Desenvolvedor Full Stack,
+          especializado em transformar conceitos em soluções completas. Domino
+          WordPress, Elementor e tecnologias de Front e back-end, entregando
+          resultados que fazem a diferença para seus projetos.
+        </p>
+        <div class="group-skills">
+          <p class="title-soft-skils">soft skills</p>
+          <div class="skills">
+            <div class="skill">
+              <img src="../images/icones/html.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/css.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/js.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/react.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/node.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/mysql.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/figma.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/wordpress.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/csharp.png" alt="" />
+            </div>
+            <div class="skill">
+              <img src="../images/icones/php.png" alt="" />
+            </div>
+          </div>
+        </div>
 
-        // Função para reiniciar a animação sem aceleração
-        const startAnimation = () => {
-          // Resetando o strokeDashoffset
-          animatedPath.style.strokeDashoffset = totalLength;
-
-          // Aplicando a animação suave
-          animatedPath.animate(
-            [
-              { strokeDashoffset: totalLength }, // Começa no final do caminho
-              { strokeDashoffset: 0 }, // Vai até o início
-            ],
-            {
-              duration: 10000, // Duração da animação em milissegundos
-              iterations: 1, // A animação roda apenas uma vez por ciclo
-              easing: "linear",
-            }
-          );
-        };
-
-        // Inicializa a animação
-        startAnimation();
-
-        // Reinicia a animação após cada ciclo
-        setInterval(startAnimation, 10000);
-      });
-    </script>
-  </body>
-</html>
+        <div class="group-buttons">
+          <a href="" class="button"
+            ><svg
+              width="20"
+              height="20"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.17444 2.66436C2.98644 2.07036 1.66944 3.20036 2.07544 4.46536L4.93344 13.3484C4.98963 13.523 5.09277 13.6788 5.23158 13.7987C5.37039 13.9187 5.53951 13.9981 5.72044 14.0284L17.5894 16.0074C18.1464 16.1004 18.1464 16.9004 17.5894 16.9934L5.72144 18.9714C5.54033 19.0015 5.371 19.0808 5.232 19.2008C5.093 19.3207 4.98971 19.4766 4.93344 19.6514L2.07544 28.5374C1.66844 29.8024 2.98544 30.9324 4.17444 30.3384L29.1684 17.8434C30.2744 17.2904 30.2744 15.7134 29.1684 15.1594L4.17444 2.66436Z"
+                fill="#B6B6B6"
+              />
+            </svg>
+            FALE COMIGO</a
+          >
+          <a href="" class="button"
+            ><svg
+              width="23"
+              height="28"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <mask
+                id="mask0_210_3342"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="32"
+                height="33"
+              >
+                <rect
+                  y="0.5"
+                  width="32"
+                  height="32"
+                  fill="url(#pattern0_210_3342)"
+                />
+              </mask>
+              <g mask="url(#mask0_210_3342)">
+                <rect
+                  x="1.56641"
+                  y="0.5"
+                  width="27.8125"
+                  height="33.25"
+                  fill="#D9D9D9"
+                />
+              </g>
+              <defs>
+                <pattern
+                  id="pattern0_210_3342"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_210_3342"
+                    transform="scale(0.00195312)"
+                  />
+                </pattern>
+                <image
+                  id="image0_210_3342"
+                  width="512"
+                  height="512"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+            CURRICULO</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
