@@ -29,3 +29,34 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+// const checkbox = document.getElementById("check");
+// const menuLateral = document.getElementById("menu-lateral");
+// const closeButton = document.querySelector(".close-menu");
+
+// checkbox.addEventListener("change", () => {
+//   if (checkbox.checked) {
+//     menuLateral.classList.add("active");
+//     document.body.style.overflow = "hidden";
+//   } else {
+//     menuLateral.classList.remove("active");
+//     document.body.style.overflow = "";
+//   }
+// });
+
+// closeButton.addEventListener("click", () => {
+//   menuLateral.classList.remove("active");
+//   document.body.style.overflow = "";
+//   checkbox.checked = false;
+// });
+
+const checkbox = document.getElementById("check");
+const menuContainer = document.getElementById("menu");
+
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
+    menuContainer.classList.add("active");
+  } else {
+    menuContainer.classList.remove("active");
+  }
+});
