@@ -42,15 +42,36 @@ checkbox.addEventListener("change", () => {
 });
 
 // PRELOADER
-
 document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.querySelector(".container-preloader");
   const mainContent = document.querySelector(".global");
   const progressCounter = document.getElementById("progress-counter");
 
-  const duration = 5000;
-  let progress = 0;
+  const duration = 5000; // Duração da animação do preloader em milissegundos
+  const preloaderFlag = "preloaderActive";
+  const expirationTime = 5 * 60 * 1000; // 5 minutos em milissegundos
 
+  // Verifica o estado da flag no localStorage
+  const preloaderState = JSON.parse(localStorage.getItem(preloaderFlag));
+  const currentTime = new Date().getTime();
+
+  // Se a flag existe e ainda está válida, não exibe o preloader
+  if (preloaderState && currentTime < preloaderState.expiration) {
+    preloader.style.display = "none";
+    mainContent.style.display = "block";
+    document.body.style.overflow = "auto";
+    return;
+  }
+
+  // Atualiza a flag no localStorage com o novo tempo de expiração
+  const newExpiration = currentTime + expirationTime;
+  localStorage.setItem(
+    preloaderFlag,
+    JSON.stringify({ expiration: newExpiration })
+  );
+
+  // Inicia a animação do preloader
+  let progress = 0;
   const interval = setInterval(() => {
     progress += 1.31;
     if (progress >= 100) {
