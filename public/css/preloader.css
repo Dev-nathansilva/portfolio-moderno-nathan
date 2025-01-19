@@ -1,0 +1,129 @@
+/* Estilo geral */
+
+.container-preloader {
+  margin: 0;
+  overflow: hidden; /* Evita scroll durante o preloader */
+  height: 100vh;
+  background-color: #03001b; /* Altere conforme necessário */
+}
+
+#preloader {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #03001b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon-wrapper,
+#text-wrapper {
+  position: absolute;
+}
+
+#icon {
+  width: 213px;
+  height: auto;
+  /* height: 222px; */
+  transform-origin: center;
+  animation: expandIcon 2s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  #icon {
+    width: 30px;
+    /* height: 132px; */
+  }
+}
+
+#text {
+  width: 698px;
+  height: auto;
+  /* height: 118px; */
+  opacity: 0;
+  animation: fadeInText 1s 2s ease-in-out forwards,
+    fadeOutText 1s 3s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  #text {
+    width: 290px;
+    /* height: 49px; */
+  }
+}
+
+#closing-rect {
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #030016;
+  animation: slideInRect 1s 4s ease-in-out forwards;
+}
+
+/* Animações */
+@keyframes expandIcon {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutText {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRect {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+#progress-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333; /* Cor do texto */
+  font-family: Arial, sans-serif;
+  animation: fadeInCounter 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Faz o contador aparecer junto com as animações */
+@keyframes fadeInCounter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

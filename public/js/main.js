@@ -30,26 +30,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// const checkbox = document.getElementById("check");
-// const menuLateral = document.getElementById("menu-lateral");
-// const closeButton = document.querySelector(".close-menu");
-
-// checkbox.addEventListener("change", () => {
-//   if (checkbox.checked) {
-//     menuLateral.classList.add("active");
-//     document.body.style.overflow = "hidden";
-//   } else {
-//     menuLateral.classList.remove("active");
-//     document.body.style.overflow = "";
-//   }
-// });
-
-// closeButton.addEventListener("click", () => {
-//   menuLateral.classList.remove("active");
-//   document.body.style.overflow = "";
-//   checkbox.checked = false;
-// });
-
 const checkbox = document.getElementById("check");
 const menuContainer = document.getElementById("menu");
 
@@ -59,4 +39,30 @@ checkbox.addEventListener("change", () => {
   } else {
     menuContainer.classList.remove("active");
   }
+});
+
+// PRELOADER
+
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.querySelector(".container-preloader");
+  const mainContent = document.querySelector(".global");
+  const progressCounter = document.getElementById("progress-counter");
+
+  const duration = 5000;
+  let progress = 0;
+
+  const interval = setInterval(() => {
+    progress += 1.31;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(interval);
+    }
+    progressCounter.textContent = `${Math.floor(progress)}%`;
+  }, 60);
+
+  setTimeout(() => {
+    preloader.style.display = "none"; // Oculta o preloader
+    mainContent.style.display = "block"; // Exibe o conteúdo principal
+    document.body.style.overflow = "auto"; // Libera o scroll
+  }, duration);
 });

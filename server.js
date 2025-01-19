@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const slugMapping = {
   "": "portfolio.html",
   "portfolio": "portfolio.html",
+  "projetos": "projetos.html",
 };
 
 // Rota principal ("/")
