@@ -175,7 +175,7 @@ span::-moz-selection {
 }
 
 .logo-principal:hover path {
-  fill: #b0b0b0;
+  fill: #cecece;
 }
 
 .group-actions-menu {
@@ -2190,7 +2190,7 @@ input[type]:checked ~ span.mid {
   /* 360px */
   #footer .content .topo .group-title .start-project {
     font-size: 80px;
-    width: 360px;
+    width: 350px;
     line-height: 80px;
   }
   #footer .content .topo .group-title .start-project span {

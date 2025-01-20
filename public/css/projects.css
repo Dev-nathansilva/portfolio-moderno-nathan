@@ -1,0 +1,88 @@
+/*-----------
+  -> PROJECTS
+ -----------*/
+
+#all-projects {
+  background: url(../images/banners/banner-tela-todos-projetos.jpg);
+  background-size: cover;
+  height: 100%;
+  padding-top: 200px;
+}
+
+#all-projects .group-title-main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+#all-projects .group-title-main h3 {
+  color: #a8a8a8;
+  font-family: Tektur;
+  font-style: normal;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2rem, 10vw, 16rem);
+}
+
+@media (min-width: 1550px) {
+  #all-projects .grid-projects {
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+  }
+  #all-projects .grid-projects .container-project {
+    width: 100%;
+    height: 500px;
+  }
+  #all-projects .grid-projects .container-project img {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1366px) {
+  #all-projects .group-title-main h3 {
+    font-size: clamp(2rem, 11vw, 16rem);
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  gap: 20px;
+  font-size: 15px;
+}
+
+.filter {
+  color: #c2c2c2;
+  font-family: Tektur;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.filter:hover {
+  color: #fff;
+}
+.filter.active {
+  color: #fff;
+  border-bottom: 1px solid;
+}
+
+@media (max-width: 1200px) {
+  #all-projects .group-title-main {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* 360px */
+  #all-projects .group-title-main {
+    gap: 15px;
+  }
+
+  .filter {
+    font-size: 16px;
+  }
+}
