@@ -1,16 +1,3 @@
-// // // PRELOADER
-// window.addEventListener("load", () => {
-//   const preloader = document.getElementById("preloader");
-//   const content = document.getElementById("content");
-
-//   if (preloader) {
-//     setTimeout(() => {
-//       preloader.style.display = "none"; // Esconde o preloader após 2 segundos
-//       content.style.display = "flex"; // Mostra o conteúdo
-//     }, 1500); // 2000ms = 2 segundos
-//   }
-// });
-
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault(); // Impede o comportamento padrão do link
@@ -95,3 +82,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "auto"; // Libera o scroll
   }, duration);
 });
+
+// -------------------------
+// BACK TO TOP
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
