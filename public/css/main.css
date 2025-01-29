@@ -162,11 +162,15 @@ span::-moz-selection {
   outline: 1px solid #b0b0b0;
 }
 
-.logo-principal {
-  height: 40px;
+.logo-principal-container {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  height: 40px;
+}
+
+.logo-principal {
+  height: 40px;
 }
 
 .logo-principal path {
@@ -403,7 +407,7 @@ input[type]:checked ~ span.mid {
     display: none;
   }
 
-  .logo-principal {
+  .logo-principal-container {
     position: relative;
     left: 0%;
     transform: translateX(0%);
@@ -2044,6 +2048,8 @@ input[type]:checked ~ span.mid {
 
 #footer .content .topo .social-media {
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 #footer .content .topo .social-media .media {
   color: #929292;
