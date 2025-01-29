@@ -32,6 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 const checkbox = document.getElementById("check");
 const menuContainer = document.getElementById("menu");
+const menuLinks = document.querySelectorAll(".group-actions-menu-mobile a");
 
 checkbox.addEventListener("change", () => {
   if (checkbox.checked) {
@@ -39,6 +40,13 @@ checkbox.addEventListener("change", () => {
   } else {
     menuContainer.classList.remove("active");
   }
+});
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuContainer.classList.remove("active");
+    checkbox.checked = false;
+  });
 });
 
 // PRELOADER
