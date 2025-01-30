@@ -812,7 +812,7 @@ input[type]:checked ~ span.mid {
 #projects {
   background: url(../images/banners/banner-section-projects.jpg);
   background-size: cover;
-  height: 1346px;
+  height: 1300px;
   padding-top: 50px;
 }
 
@@ -1234,7 +1234,7 @@ input[type]:checked ~ span.mid {
   background: url(../images/banners/banner-section-solucoes.png) no-repeat
     center;
   background-size: cover;
-  height: 764px;
+  height: 770px;
 }
 
 #solutions .block-content {
@@ -1244,7 +1244,7 @@ input[type]:checked ~ span.mid {
   border-radius: 15px;
   border: 1px solid #383838;
   background: #050316;
-  margin: 80px auto 0;
+  margin: 120px auto 0;
   display: flex;
   justify-content: space-between;
   gap: 30px;
