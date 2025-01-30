@@ -213,7 +213,7 @@ span::-moz-selection {
   font-size: 17px;
   font-weight: 600;
   display: flex;
-  padding: 9px 13px 9px 23px;
+  padding: 12px 13px 12px 23px;
   justify-content: center;
   align-items: center;
   gap: 13px;
@@ -227,7 +227,7 @@ span::-moz-selection {
   transform: scale(1);
 }
 .group-actions-menu .btn-solicitar-servico svg {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   transition: transform 0.2s ease-in-out, margin-left 0.2s ease-in-out;
 }
 
@@ -340,7 +340,7 @@ input[type]:checked ~ span.mid {
   font-size: 17px;
   font-weight: 600;
   display: flex;
-  padding: 9px 13px 9px 23px;
+  padding: 12px 13px 12px 23px;
   justify-content: center;
   align-items: center;
   gap: 13px;
@@ -354,7 +354,7 @@ input[type]:checked ~ span.mid {
   transform: scale(1);
 }
 .group-actions-menu-mobile .btn-solicitar-servico-mobile svg {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   transition: transform 0.2s ease-in-out, margin-left 0.2s ease-in-out;
 }
 
