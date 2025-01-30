@@ -2275,5 +2275,6 @@ input[type]:checked ~ span.mid {
   #backToTop {
     bottom: 30px;
     right: 20px;
+    background-color: #00000074;
   }
 }
