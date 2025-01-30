@@ -813,7 +813,7 @@ input[type]:checked ~ span.mid {
   background: url(../images/banners/banner-section-projects.jpg);
   background-size: cover;
   height: 1346px;
-  padding-top: 90px;
+  padding-top: 50px;
 }
 
 #projects .container-header {
