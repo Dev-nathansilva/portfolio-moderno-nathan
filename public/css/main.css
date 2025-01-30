@@ -2259,6 +2259,7 @@ input[type]:checked ~ span.mid {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
 }
 #backToTop svg {
   width: 24px;
@@ -2268,4 +2269,11 @@ input[type]:checked ~ span.mid {
 #backToTop.show {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 767px) {
+  #backToTop {
+    bottom: 30px;
+    right: 20px;
+  }
 }
