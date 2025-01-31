@@ -1188,7 +1188,7 @@ input[type]:checked ~ span.mid {
 @media (max-width: 767px) {
   /* 360px */
   #projects {
-    height: 3176px;
+    height: 100%;
     background: url(../images/banners/fundo-section-projects-celular.jpg);
   }
 
