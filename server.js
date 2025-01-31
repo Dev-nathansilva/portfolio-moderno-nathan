@@ -13,6 +13,7 @@ const slugMapping = {
   "projetos": "projetos.html",
   "projetos/vision": "projetos/visiont.html",
   "projetos/drakarla": "projetos/drakarla.html",
+  "projetos/curadoria": "projetos/curadoria.html",
 };
 
 // Rota principal ("/")

@@ -303,16 +303,20 @@
 /* ESPECÍFICO */
 
 @media (min-width: 767px) {
-  #drakarla #about-project .group-info .container-name {
+  #project-name-large #about-project .group-info .container-name {
     width: 500px;
   }
 }
 
 @media (max-width: 767px) {
-  #drakarla #about-project .group-info .container-name .name {
+  #project-name-large #about-project .group-info .container-name .name {
     font-size: 66px;
   }
-  #drakarla #about-project .group-info .container-name .name.destaque {
+  #project-name-large
+    #about-project
+    .group-info
+    .container-name
+    .name.destaque {
     font-size: 61px;
   }
 }
