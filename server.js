@@ -15,6 +15,7 @@ const slugMapping = {
   "projetos/drakarla": "projetos/drakarla.html",
   "projetos/curadoria": "projetos/curadoria.html",
   "projetos/assessoria": "projetos/assessoria.html",
+  "projetos/foxaligner": "projetos/foxaligner.html",
 };
 
 // Rota principal ("/")
