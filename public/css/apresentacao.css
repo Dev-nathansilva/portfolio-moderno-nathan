@@ -311,6 +311,7 @@
 @media (max-width: 767px) {
   #project-name-large #about-project .group-info .container-name .name {
     font-size: 66px;
+    line-height: 76px;
   }
   #project-name-large
     #about-project
@@ -319,4 +320,10 @@
     .name.destaque {
     font-size: 61px;
   }
+}
+
+/* --------------------- */
+
+#about-project.lp-assessoria .about-development {
+  gap: 40px;
 }
